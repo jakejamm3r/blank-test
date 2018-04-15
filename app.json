@@ -10,7 +10,7 @@
   "success_url": "https://blank.p3.no",
   "env": {
     "WEBHOOK_URL": {
-      "description": "Incoming webhook in Slack."
+      "description": "https://hooks.slack.com/services/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"
     }
   },
   "image": "heroku/python",
@@ -18,7 +18,7 @@
     {
       "plan": "heroku-postgresql",
       "options": {
-        "version": "9.4"
+        "version": "9.3"
       }
     },
     {
