@@ -1,0 +1,33 @@
+{
+  "name": "Blankbot",
+  "description": "Bare sjekker om det har skjedd noe nytt på BLANK hvert tiende minutt lissom.",
+  "keywords": [
+    "BLANK",
+    "NRK"
+  ],
+  "repository": "https://github.com/netliferesearch/skambot",
+  "logo": "https://github.com/netliferesearch/skambot/raw/master/img/logo.png",
+  "success_url": "http://blank.p3.no",
+  "env": {
+    "WEBHOOK_URL": {
+      "description": "Incoming webhook in Slack."
+    }
+  },
+  "image": "heroku/python",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    },
+    {
+      "plan": "scheduler"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
+}
