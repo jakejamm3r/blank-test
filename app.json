@@ -5,7 +5,7 @@
     "BLANK",
     "NRK"
   ],
-  "repository": "https://github.com/netliferesearch/skambot",
+  "repository": "https://github.com/jakejamm3r/blank-test",
   "logo": "https://github.com/netliferesearch/skambot/raw/master/img/logo.png",
   "success_url": "http://blank.p3.no",
   "env": {
