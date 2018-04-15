@@ -44,7 +44,7 @@ def post_to_slack(tittel, url, r):
             % (response.status_code, response.text)
         )
 
-page = r.get('http://blank.p3.no')
+page = r.get('https://blank.p3.no')
 content = page.content
 soup = bs(content, "html.parser")
 articles = soup.find_all('article')
