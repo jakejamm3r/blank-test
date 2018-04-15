@@ -7,7 +7,7 @@
   ],
   "repository": "https://github.com/jakejamm3r/blank-test",
   "logo": "https://github.com/netliferesearch/skambot/raw/master/img/logo.png",
-  "success_url": "http://blank.p3.no",
+  "success_url": "https://blank.p3.no",
   "env": {
     "WEBHOOK_URL": {
       "description": "Incoming webhook in Slack."
