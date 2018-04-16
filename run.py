@@ -32,7 +32,7 @@ cursor.execute("CREATE TABLE IF NOT EXISTS updates(id serial PRIMARY KEY, title 
 conn.commit()
 
 def post_to_slack(url, r):
-    payload = u'Noe nytt har skjedd på BLANK: <' + url + '>'
+    payload = u'Noe nytt har skjedd på Blank: <' + url + '>'
     slack_data = {'text': payload}
     response = r.post(
         WEBHOOK_URL, data=json.dumps(slack_data),
