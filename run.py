@@ -61,7 +61,7 @@ if not records:
 if records:
     if records[0][1] != bylines[0]:
         post_to_slack(bylines[0], link, r)
-        cursor.execute("INSERT INTO updates (title) VALUES (%s)", [bylines[0]])
+        cursor.execute("INSERT INTO updates (title) VALUES (%s)", [link])
         conn.commit()
         print('Awsm! Ny episode :) :) :)')
     else:
