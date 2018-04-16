@@ -60,7 +60,7 @@ if not records:
     print("Måtte lissom legge noe i tabellen a")
 if records:
     if records[0][1] != link:
-        post_to_slack(bylines[0], link, r)
+        post_to_slack(link, r)
         cursor.execute("INSERT INTO updates (title) VALUES (%s)", [link])
         conn.commit()
         print('Awsm! Ny episode :) :) :)')
