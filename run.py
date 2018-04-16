@@ -31,8 +31,8 @@ cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS updates(id serial PRIMARY KEY, title VARCHAR (255) UNIQUE NOT NULL);")
 conn.commit()
 
-def post_to_slack(tittel, url, r):
-    payload = u'Noe nytt har skjedd på BLANK: <' + url + '|'+tittel+'>'
+def post_to_slack(url, r):
+    payload = u'Noe nytt har skjedd på BLANK: <' + url + '>'
     slack_data = {'text': payload}
     response = r.post(
         WEBHOOK_URL, data=json.dumps(slack_data),
@@ -60,7 +60,7 @@ if not records:
     print("Måtte lissom legge noe i tabellen a")
 if records:
     if records[0][1] != link:
-        post_to_slack(link, r)
+        post_to_slack(link)
         cursor.execute("INSERT INTO updates (title) VALUES (%s)", [link])
         conn.commit()
         print('Awsm! Ny episode :) :) :)')
